@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var x=3,y=9;
+      // function f1(){
+      //   console.log("x="+x)
+      //   if(y%3 &&(y=(y+1))>=10){
+      //     y="10"
+      //   }
+      // }
+      function timeStrToSeconds(timeStr) {
+        var times = timeStr.split(":").reverse(); // 将字符串切割成时间数组并翻转
+        var seconds = 0;
+        for (var i = 0; i < times.length; i++) {
+          seconds += parseInt(times[i]) * Math.pow(60, i); // 累加每一位的秒数
+        }
+        return seconds;
+      }
+
+      // 返回 259503 秒
+      timeStrToSeconds("10:05"); // 返回 605 秒
+      timeStrToSeconds("06"); // 返回 6 秒
+      console.log(timeStrToSeconds("05"));
+    </script>
+  </body>
+</html>

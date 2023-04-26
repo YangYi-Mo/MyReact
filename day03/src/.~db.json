@@ -1,0 +1,34 @@
+{
+  "role": [
+    {
+      "id": 1,
+      "name": "系统管理员",
+      "description": "管理整合平台，可以操作企业所有功能",
+      "state": 2
+    },
+    {
+      "id": 2,
+      "name": "人事经理",
+      "description": "负责整合人事部门123",
+      "state": 1
+    },
+    {
+      "id": 3,
+      "name": "人事专员",
+      "description": "只能操作员工菜单",
+      "state": 1
+    },
+    {
+      "id": 4,
+      "name": "薪资专员",
+      "description": "绩效管理",
+      "state": 1
+    },
+    {
+      "id": 5,
+      "name": "员工",
+      "description": "员工",
+      "state": 1
+    }
+  ]
+}

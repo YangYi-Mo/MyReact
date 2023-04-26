@@ -1,0 +1,14 @@
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../../assets/earth.jpeg);
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-card{
+    width:440px;
+    height: 360px;
+    
+}
