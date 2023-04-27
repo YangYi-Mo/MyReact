@@ -8,7 +8,7 @@ import {
 } from "@ant-design/icons";
 
 import { useNavigate } from "react-router-dom";
-import { Layout, Menu, theme, Row, Popconfirm } from "antd";
+import { Layout, Menu, theme, Row, Popconfirm, Avatar } from "antd";
 import { getUserInfo } from "../../api/user";
 import { useEffect, useState } from "react";
 
@@ -74,7 +74,9 @@ const App = () => {
       </Sider>
       <Layout>
         <Header style={{ padding: 0, background: colorBgContainer }}>
-          <Row justify="end">
+          <Row justify="end" align={"middle"}>
+            <Avatar src={userInfo.photo}></Avatar>
+            <span style={{ marginRight: 20 }}>{userInfo.name}</span>
             <span style={{ fontSize: 20, marginRight: 20 }}>
               <Popconfirm
                 title="提示"
