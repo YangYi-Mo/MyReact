@@ -6,7 +6,14 @@ const service = axios.create({
 })
 
 // 请求拦截器
-service.interceptors.request.use()
+service.interceptors.request.use(config =>{
+    const userInfo = JSON.parse(window.localStorage.getItem('user_info') || '{}')
+    if(userInfo.token){
+        // 为请求头对象，添加token验证的Authorization字段
+        config.headers.Authorization = `Bearer ${userInfo.token}`
+    }
+    return config
+})
 
 // 响应拦截器
 service.interceptors.response.use((response)=>{

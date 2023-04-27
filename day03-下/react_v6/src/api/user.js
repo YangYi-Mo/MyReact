@@ -15,3 +15,10 @@ export function sendCode(mobile){
         url:`sms/codes/${mobile}`
     })
 }
+
+// 获取用户信息
+export function getUserInfo(){
+    return request({
+        url:'/user/profile'
+    })
+}
